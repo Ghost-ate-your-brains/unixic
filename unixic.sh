@@ -18,3 +18,13 @@ mkdir halium-10.0 && cd halium-10.0
 curl https://raw.githubusercontent.com/Halium/halium-devices/aa82ba147c27c7d2ede8b267b14ab2a93df42bea/manifests/xiaomi_olive.xml > halium/devices/manifests/xiaomi_olive.xml
 ~/halium-10.0/halium/devices/setup olive
 ~/halium-10.0/hybris-patches/apply-patches.sh --mb
+source ~/halium-10.0/build/envsetup.sh
+lunch olive
+wget https://raw.githubusercontent.com/Halium/halium-boot/master/check-kernel-config
+~/halium-10.0/check-kernel-config ~/halium-10.0/kernel/xiaomi/olive/arch/arm64/configs/olive-perf-defconfig -w
+~/halium-10.0/check-kernel-config ~/halium-10.0/kernel/xiaomi/olive/arch/arm64/configs/olive-perf-defconfig -w
+~/halium-10.0/check-kernel-config ~/halium-10.0/kernel/xiaomi/olive/arch/arm64/configs/olive-perf-defconfig -w
+~/halium-10.0/check-kernel-config ~/halium-10.0/kernel/xiaomi/olive/arch/arm64/configs/olive-perf-defconfig -w
+~/halium-10.0/check-kernel-config ~/halium-10.0/kernel/xiaomi/olive/arch/arm64/configs/olive-perf-defconfig -w
+~/halium-10.0/check-kernel-config ~/halium-10.0/kernel/xiaomi/olive/arch/arm64/configs/olive-perf-defconfig -w
+mka mkbootimg
