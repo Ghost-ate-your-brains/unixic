@@ -13,8 +13,8 @@ source ~/.bashrc
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+rx ~/bin/repo
 mkdir halium-10.0 && cd halium-10.0
-repo init -u https://github.com/Halium/android -b halium-10.0 --depth=1
-repo sync -c -j 16
+~/bin/repo init -u https://github.com/Halium/android -b halium-10.0 --depth=1
+~/bin/repo sync -c -j 16
 curl https://raw.githubusercontent.com/Halium/halium-devices/aa82ba147c27c7d2ede8b267b14ab2a93df42bea/manifests/xiaomi_olive.xml > halium/devices/manifests/xiaomi_olive.xml
-./halium/devices/setup olive
-hybris-patches/apply-patches.sh --mb
+~/halium-10.0/halium/devices/setup olive
+~/halium-10.0/hybris-patches/apply-patches.sh --mb
