@@ -16,8 +16,8 @@ mkdir halium-10.0 && cd halium-10.0
 ~/bin/repo init -u https://github.com/Halium/android -b halium-10.0 --depth=1
 ~/bin/repo sync -c -j 16
 curl https://raw.githubusercontent.com/Halium/halium-devices/aa82ba147c27c7d2ede8b267b14ab2a93df42bea/manifests/xiaomi_olive.xml > ~/halium-10.0/halium/devices/manifests/xiaomi_olive.xml
-~/halium-10.0/halium/devices/setup olive
-~/halium-10.0/hybris-patches/apply-patches.sh --mb
+#~/halium-10.0/halium/devices/setup olive
+#~/halium-10.0/hybris-patches/apply-patches.sh --mb
 #source ~/halium-10.0/build/envsetup.sh
 #lunch lineage_olive
 #wget https://raw.githubusercontent.com/Halium/halium-boot/master/check-kernel-config
